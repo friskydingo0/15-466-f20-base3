@@ -1,8 +1,8 @@
-# (TODO: your game's title)
+# Hungry Boxy with Sound
 
-Author: (TODO: your name)
+Author: Pavan Paravasthu
 
-Design: (TODO: In two sentences or fewer, describe what is new and interesting about your game.)
+Design: Same game as game 2. Only changes are playing 2 BGM sounds parallely. One is a normal melody, the other uses dom 7 chords to provide a tense/morose feel on losing.
 
 Screen Shot:
 
@@ -10,9 +10,9 @@ Screen Shot:
 
 How To Play:
 
-(TODO: describe the controls and (if needed) goals/strategy.)
+WASD movement. Eat the cheese to survive.
 
-Sources: (TODO: list a source URL for any assets you did not create yourself. Make sure you have a license for the asset.)
+Sources: All music made with https://musiclab.chromeexperiments.com/Song-Maker/
 
 This game was built with [NEST](NEST.md).
 

@@ -28,21 +28,30 @@ struct PlayMode : Mode {
 	//local copy of the game scene (so code can change it during gameplay):
 	Scene scene;
 
-	//hexapod leg to wobble:
-	Scene::Transform *hip = nullptr;
-	Scene::Transform *upper_leg = nullptr;
-	Scene::Transform *lower_leg = nullptr;
-	glm::quat hip_base_rotation;
-	glm::quat upper_leg_base_rotation;
-	glm::quat lower_leg_base_rotation;
-	float wobble = 0.0f;
+	// most scene code taken from my own game 2 code
 
-	glm::vec3 get_leg_tip_position();
+	// Player cube
+	Scene::Transform *boxy = nullptr;
+	Scene::Transform *cheese = nullptr;
 
-	//music coming from the tip of the leg (as a demonstration):
-	std::shared_ptr< Sound::PlayingSample > leg_tip_loop;
-	
+	const float FloorX = 2.0f;
+	const float FloorY = 1.5f;
+
+	//music for the feedback
+	std::shared_ptr< Sound::PlayingSample > bgm_normal_loop;
+	std::shared_ptr< Sound::PlayingSample > bgm_low_loop;
+
 	//camera:
 	Scene::Camera *camera = nullptr;
 
+	// Game Timer
+	float timer = 3.0f;
+
+	// Score
+	unsigned int score = 0;
+	unsigned int best_score = 0;
+
+	bool is_game_over = false;
+
+	void spawn_cheese();
 };
